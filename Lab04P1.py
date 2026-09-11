@@ -1,6 +1,6 @@
 ##
-# Student Name - Replace with your name!
-# Date - Replace with the date!
+# Student Name - George Veney
+# Date - Sep 11 2026
 # Landscape Job Estimator
 #
 import math        # This library is needed for line 26
@@ -17,19 +17,19 @@ PROJECT_FEE = 100.00
 # main module
 def main():
     # Ask the user for the garden space in square feet
-    garden_space = FillThisIn
+    garden_space = int(input('Enter garden space in square feet: '))
 
     # Ask the user for the mulch price
-    mulch_price = FillThisIn
+    mulch_price = float(input('Enter mulch price per bag: '))
 
     # Calculate number of bags needed
     num_bags = math.ceil(garden_space / FEET_PER_BAG)
 
     # Calculate labor hours (2 hours labor for every bag of mulch)
-    hours_labor = FillThisIn
+    hours_labor = num_bags * 2
 
     # Calculate cost of labor (including project fee)
-    cost_labor = FillThisIn
+    cost_labor = (hours_labor * 40.0) + 100
 
     # Calculate mulch cost
     cost_mulch = num_bags * mulch_price
@@ -51,14 +51,14 @@ def show_cost_estimate(bags_mulch, labor_hours, mulch_total, labor_total):
     """
 
     # Calculate total cost
-    total_cost = FillThisIn
+    total_cost = mulch_total + labor_total
 
     # Display results
-    print (f'Bags of mulch: {FillThisIn}')
-    print (f'Hours of labor: {FillThisIn}')
+    print (f'Bags of mulch: {bags_mulch}')
+    print (f'Hours of labor: {labor_hours}')
     print (f'Mulch charges: ${mulch_total:.2f}')
-    print (f'Labor charges: ${FillThisIn}')
-    print (f'Total cost: ${FillThisIn}')
+    print (f'Labor charges: ${labor_total:.2f}')
+    print (f'Total cost: ${total_cost:.2f}')
 
 # Call the main function.
 main()
